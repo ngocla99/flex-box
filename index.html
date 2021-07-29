@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox container</title>
+  </head>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="script.css" />
+  <body>
+    <header>
+      <h1>Flexbox container</h1>
+    </header>
+
+    <div class="container">
+      <!-- CONTENT DIRECTION -->
+      <div class="sub-container content-direction">
+        <h2>Content Direction</h2>
+        <hr class="line" />
+        <p>
+          You can change the overal content flow (column or row), and you can
+          even change the arrangement of content. (default: row)
+        </p>
+        <p class="code">
+          .container { <br />&emsp;display: flex;<br />&emsp;flex-direction:
+          row-reverse;<br />}
+        </p>
+
+        <!-- ROW REVERSE -->
+        <div class="flex-box row-reverse">
+          <div class="el">1</div>
+          <div class="el">2</div>
+          <div class="el">3</div>
+          <div class="el">4</div>
+          <div class="el">5</div>
+        </div>
+
+        <!-- COLUMN -->
+        <p class="code">
+          .container { <br />&emsp;display: flex;<br />&emsp;flex-direction:
+          column;<br />}
+        </p>
+        <div class="flex-box column">
+          <div class="el el--c">1</div>
+          <div class="el el--c">2</div>
+          <div class="el el--c">3</div>
+          <div class="el el--c">4</div>
+          <div class="el el--c">5</div>
+        </div>
+
+        <!-- COLUMN-REVERSE -->
+        <p class="code">
+          .container { <br />&emsp;display: flex;<br />&emsp;flex-direction:
+          column-reverse;<br />}
+        </p>
+        <div class="flex-box column-reverse">
+          <div class="el el--c">1</div>
+          <div class="el el--c">2</div>
+          <div class="el el--c">3</div>
+          <div class="el el--c">4</div>
+          <div class="el el--c">5</div>
+        </div>
+      </div>
+
+      <div class="content-combine">
+        <!-- CONTENT WRAPPING -->
+        <div class="sub-container content-wrapping">
+          <h2>Content Wrapping</h2>
+          <hr class="line" />
+
+          <!-- Default -->
+          <p>By default, all items are put on single line.</p>
+          <p class="code">.container { <br />&emsp;display: flex; <br />}</p>
+          <div class="flex-box">
+            <div class="el">1</div>
+            <div class="el">2</div>
+            <div class="el">3</div>
+            <div class="el">4</div>
+            <div class="el">5</div>
+            <div class="el">6</div>
+            <div class="el">7</div>
+            <div class="el">8</div>
+            <div class="el">9</div>
+            <div class="el">10</div>
+            <div class="el">11</div>
+            <div class="el">12</div>
+          </div>
+
+          <!-- Wrap -->
+          <p class="code">
+            .container { <br />&emsp;display: flex; <br />&emsp;flex-wrap: wrap;
+            <br />}
+          </p>
+          <div class="flex-box wrap">
+            <div class="el">1</div>
+            <div class="el">2</div>
+            <div class="el">3</div>
+            <div class="el">4</div>
+            <div class="el">5</div>
+            <div class="el">6</div>
+            <div class="el">7</div>
+            <div class="el">8</div>
+            <div class="el">9</div>
+            <div class="el">10</div>
+            <div class="el">11</div>
+            <div class="el">12</div>
+            <div class="el">13</div>
+            <div class="el">14</div>
+            <div class="el">15</div>
+          </div>
+
+          <!-- Wrap-reverse -->
+          <p class="code">
+            .container { <br />&emsp;display: flex; <br />&emsp;flex-wrap:
+            wrap-reverse; <br />}
+          </p>
+          <div class="flex-box wrap-reverse">
+            <div class="el">1</div>
+            <div class="el">2</div>
+            <div class="el">3</div>
+            <div class="el">4</div>
+            <div class="el">5</div>
+            <div class="el">6</div>
+            <div class="el">7</div>
+            <div class="el">8</div>
+            <div class="el">9</div>
+            <div class="el">10</div>
+            <div class="el">11</div>
+            <div class="el">12</div>
+            <div class="el">13</div>
+            <div class="el">14</div>
+            <div class="el">15</div>
+          </div>
+        </div>
+
+        <!-- DEFAULT BEHAVIOR -->
+        <div class="sub-container default-behavior">
+          <h2>Default Behavior</h2>
+          <hr class="line" />
+          <p style="margin-bottom: 5px">
+            The default behavior of flexbox will...
+          </p>
+          <ul>
+            <li>Treat the container as block (full width)</li>
+            <li>Left align all items</li>
+            <li>Stretch each item's height to fit the container</li>
+          </ul>
+          <div class="code">
+            <p>.container { <br />&emsp;display: flex; <br />}</p>
+          </div>
+          <div class="flex-box">
+            <div class="el">1</div>
+            <div class="el">2</div>
+            <div class="el">3</div>
+            <div class="el">4</div>
+            <div class="el">5</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HORIZONTAL ALIGN -->
+      <div class="sub-container horizontal-align">
+        <h2>Horizontal Alignment</h2>
+        <hr class="line" />
+        <p>
+          You can align items horizontally as a group or individually (default:
+          flex-start)
+        </p>
+
+        <!-- CENTER -->
+        <div class="code">
+          <p>
+            .container {<br />&emsp;display: flex; <br />&emsp;justify-content:
+            center; <br />}
+          </p>
+        </div>
+        <div class="flex-box hor-center">
+          <div class="el">1</div>
+          <div class="el">2</div>
+          <div class="el">3</div>
+          <div class="el">4</div>
+          <div class="el">5</div>
+        </div>
+
+        <!-- END -->
+        <div class="code">
+          <p>
+            .container {<br />&emsp;display: flex; <br />&emsp;justify-content:
+            flex-end; <br />}
+          </p>
+        </div>
+        <div class="flex-box hor-flex-end">
+          <div class="el">1</div>
+          <div class="el">2</div>
+          <div class="el">3</div>
+          <div class="el">4</div>
+          <div class="el">5</div>
+        </div>
+
+        <!-- SPACE-AROUND -->
+        <div class="code">
+          <p>
+            .container {<br />&emsp;isplay: flex; <br />&emsp;justify-content:
+            space-around; <br />}
+          </p>
+        </div>
+        <div class="flex-box hor-space-around">
+          <div class="el">1</div>
+          <div class="el">2</div>
+          <div class="el">3</div>
+          <div class="el">4</div>
+          <div class="el">5</div>
+        </div>
+
+        <!-- SPACE-BETWEEN -->
+        <div class="code">
+          <p>
+            .container {<br />&emsp;display: flex; <br />&emsp;justify-content:
+            space-between; <br />}
+          </p>
+        </div>
+        <div class="flex-box hor-space-between">
+          <div class="el">1</div>
+          <div class="el">2</div>
+          <div class="el">3</div>
+          <div class="el">4</div>
+          <div class="el">5</div>
+        </div>
+      </div>
+
+      <div class="content-combine">
+        <!-- VERTICAL ALIGN -->
+        <div class="sub-container vertical-align">
+          <h2>Vertical Alignment</h2>
+          <hr class="line" />
+          <p>
+            You can align items vertically as a group or individually (default:
+            flex-start)
+          </p>
+
+          <!-- CENTER -->
+          <div class="code">
+            <p>
+              .container {<br />&emsp;display: flex; <br />&emsp;align-items:
+              center; <br />}
+            </p>
+          </div>
+          <div class="flex-box ver-center">
+            <div class="el el--v">1</div>
+            <div class="el el--v">2</div>
+            <div class="el el--v">3</div>
+            <div class="el el--v">4</div>
+            <div class="el el--v">5</div>
+          </div>
+
+          <!-- START -->
+          <div class="code">
+            <p>
+              .container {<br />&emsp;display: flex; <br />&emsp;align-items:
+              flex-start; <br />}
+            </p>
+          </div>
+          <div class="flex-box ver-flex-start">
+            <div class="el el--v">1</div>
+            <div class="el el--v">2</div>
+            <div class="el el--v">3</div>
+            <div class="el el--v">4</div>
+            <div class="el el--v">5</div>
+          </div>
+
+          <!-- END -->
+          <div class="code">
+            <p>
+              .container {<br />&emsp;display: flex; <br />&emsp;align-items:
+              flex-end; <br />}
+            </p>
+          </div>
+          <div class="flex-box ver-flex-end">
+            <div class="el el--v">1</div>
+            <div class="el el--v">2</div>
+            <div class="el el--v">3</div>
+            <div class="el el--v">4</div>
+            <div class="el el--v">5</div>
+          </div>
+        </div>
+
+        <!-- PERFECT ALIGNMENT -->
+        <div class="sub-container perfect-align">
+          <h2>Perfect Center Alignment</h2>
+          <hr class="line" />
+
+          <p>
+            You can combine selectors to get your desired layout. Perfect
+            centering is breeze with flexbox.
+          </p>
+          <div class="code">
+            <p>
+              .container {<br />&emsp;display: flex; <br />&emsp;align-items:
+              center <br />&emsp;justify-content: center; <br />}
+            </p>
+          </div>
+
+          <div class="flex-box per-align">
+            <div class="el el--v">1</div>
+            <div class="el el--v">2</div>
+            <div class="el el--v">3</div>
+            <div class="el el--v">4</div>
+            <div class="el el--v">5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
